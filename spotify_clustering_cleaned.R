@@ -27,11 +27,26 @@ spotify_df <- read.csv("./spotify_files/data.csv")
 #17 release_date
 #18 speechiness
 #19 tempo
+spotify_df_copy <- data.frame(spotify_df)
+#spotify_df_copy$key <- 1:nrow(spotify_df_copy)
 
 spotify_df <- spotify_df[,c(-2,-4,-8,-9,-11,-14,-15,-17)]
+
+
+rest_of_cols <- spotify_df_copy[,c(2,4,8,9,11,14,15,17)]
+
 spotify_norm_values <- preProcess(spotify_df, method = c("center", "scale"))
 spotify_df_norm <- predict(spotify_norm_values, spotify_df)
 
+spotify_df_norm_copy <- data.frame(spotify_df_norm)
+#spotify_df_norm_copy$key <- 1:nrow(spotify_df_norm_copy)
+
+#add back the other rows and save for top_list_generator
+#nrow(rest_of_cols)
+#nrow(spotify_df_norm)
+
+merged_df <- cbind(rest_of_cols,spotify_df_norm)
+saveRDS(merged_df, "spotify_clusters_and_desc.rds")
 
 set.seed(123)
 # function to compute total within-cluster sum of square 
@@ -53,10 +68,13 @@ plot(k.values, wss_values,
 #Is the knee bend at 3???????????????????????
 
 km_3 <- kmeans(spotify_df_norm,3, nstart=10)
+
 plot_1 <- fviz_cluster(km_3, geom = "point", data = spotify_df_norm) + ggtitle("k = 3")
 plot_1
 
 km_3
+saveRDS(km_3, file="kmeans.rds")
+
 #Category characteristics
 #1 
 #High Acoustic + instrumental,

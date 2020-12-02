@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "spotify_clustering"
 output: spotify_clustering
 ---
 GUIDE FROM - https://www.kaggle.com/prathitshivade/spotify-timeseries-clustering

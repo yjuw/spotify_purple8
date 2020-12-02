@@ -1,0 +1,18 @@
+---
+title: "top_list_generator"
+output: top_list_generator
+---
+
+```{r}
+kmeans <- readRDS(file="kmeans.rds")
+spotify_df_norm <- readRDS(file="spotify_clusters_and_desc.rds")
+```
+
+```{r}
+kmeans
+```
+
+```{r}
+spotify_df_norm
+```
+
