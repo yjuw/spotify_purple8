@@ -15,4 +15,22 @@ kmeans
 ```{r}
 spotify_df_norm
 ```
+```{r}
+kmeans$cluster
+```
+
+```{r}
+#input decade + mood(our cluster)
+#return list of songs in that decade, mood, genre
+generate_list <- function(dataframe, kmeans, decade, clusterChosen){
+    idx = dataframe$year >= decade &
+        dataframe$year < (decade+10) & 
+        kmeans$cluster == clusterChosen
+    dataframe[idx,]
+}
+
+generate_list(spotify_df_norm, kmeans, 1920, 1)
+print(nrow(spotify_df_norm))
+
+```
 
