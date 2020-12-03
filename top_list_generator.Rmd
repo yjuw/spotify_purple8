@@ -7,6 +7,11 @@ output: top_list_generator
 kmeans <- readRDS(file="kmeans.rds")
 spotify_df_norm <- readRDS(file="spotify_clusters_and_desc.rds")
 ```
+```{r}
+#needs processing to get the genres
+#genres <- read.csv(file="./spotify_files/data_w_genres.csv")[1]
+#cbind(spotify_df_norm,genres)
+```
 
 ```{r}
 kmeans

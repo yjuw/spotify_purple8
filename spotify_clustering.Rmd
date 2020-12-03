@@ -51,7 +51,7 @@ names(spotify_df)
 ##Test Run with all notable traits
 will probably split this one up into groups of 3 so we can visualize everything
 ```{r}
-spotify_df <- spotify_df[,c(-2,-4,-9,-11,-14,-15,-17)]
+spotify_df <- spotify_df[,c(-2,-4,-8,-9,-11,-14,-15,-17)]
 #spotify_df$mode <- factor(spotify_df$mode)
 spotify_norm_values <- preProcess(spotify_df, method = c("center", "scale"))
 spotify_df_norm <- predict(spotify_norm_values, spotify_df)
