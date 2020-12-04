@@ -1,0 +1,9 @@
+https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
+
+https://stackoverflow.com/questions/49554139/boxplot-of-multiple-columns-of-a-pandas-dataframe-on-the-same-figure-seaborn
+
+https://www.kaggle.com/prathitshivade/spotify-timeseries-clustering
+
+https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
+
+https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks
