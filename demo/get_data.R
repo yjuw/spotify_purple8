@@ -21,15 +21,15 @@ automatic_generation <- function(big_df, user){
 
 auto_list <- automatic_generation(big_df, user)
 auto_list[,2] <- paste("http://open.spotify.com/track/", auto_list[,2], sep="")
-
+auto_list[,2] <- paste(auto_list[,2],"<br>", sep="")
 set.seed(753984)
 auto_list1 <- automatic_generation(big_df,user)
 auto_list1[,2] <- paste("http://open.spotify.com/track/", auto_list1[,2],sep="")
-
+auto_list1[,2] <- paste(auto_list1[,2],"<br>", sep="")
 set.seed(123456)
 auto_list2 <- automatic_generation(big_df,user)
 auto_list2[,2] <- paste("http://open.spotify.com/track/", auto_list2[,2], sep="")
-
+auto_list2[,2] <- paste(auto_list2[,2],"<br>", sep="")
 write.csv(auto_list, "autolist1.csv")
 write.csv(auto_list1, "autolist2.csv")
 write.csv(auto_list2, "autolist3.csv")

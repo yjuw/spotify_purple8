@@ -12,3 +12,12 @@
     outline-color: purple;
     outline-style: solid
   }
+
+  p{
+    display:inline;
+  }
+
+  p:after {
+    content: "";
+    display: block;
+  }
