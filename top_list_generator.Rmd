@@ -49,6 +49,8 @@ generate_list(spotify_df_norm, kmeans, decade, cluster)
 set.seed(111)
 big_df <- cbind(spotify_df_norm,kmeans$cluster)
 user <- sample_n(big_df, 100)
+saveRDS(user, "user.rds")
+saveRDS(big_df, "big_df.rds")
 ```
 ```{r}
 

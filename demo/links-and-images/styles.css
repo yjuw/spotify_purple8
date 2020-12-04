@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+    text-align:center;
+    vertical-align: middle;
+    line-height:90px;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+    outline: 3px;
+    outline-color: purple;
+    outline-style: solid
+  }
